@@ -1,0 +1,29 @@
+en:
+  
+  # custom sections
+  language_name: English
+  
+  are_you_sure: 'are you sure?'
+  delete: 'delete'
+  edit: 'edit'
+  menus: 'menus'
+  
+  
+  activerecord: 
+    attributes:
+      menus:
+        name: "name"
+        path: 'path'
+        parent: 'parent menu'
+  
+  menus:
+    create_new: 'create new menu'
+    
+    create:
+      notice: 'The menu was successfully created.'
+      warning: 'There was a problem saving the menu'
+    update:
+      notice: 'The menu was successfully updated.'
+      warning: 'There was a problem saving the menu'
+    destroy:
+      notice: 'The menu was deleted'
