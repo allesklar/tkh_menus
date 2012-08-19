@@ -1,0 +1,28 @@
+<h1>Listing Menus</h1>
+
+<table class='table table-striped'>
+	<thead>
+  <tr>
+	    <th><%= t( 'activerecord.attributes.menus.name').capitalize %></th>
+			<th><%= t( 'activerecord.attributes.menus.path').capitalize %></th>
+			<th><%= t( 'activerecord.attributes.menus.parent').capitalize %></th>
+	    <th>Actions</th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+		<% @menus.each do |menu| %>
+		  <tr>
+		    <td><%= menu.name %></td>
+		    <td><%= menu.path %></td>
+				<td><%= "#{menu.parent.id} - #{menu.parent.name}" unless menu.orphan? %></td>
+		    <td><%= link_to t('edit'), edit_menu_path(menu), class: 'btn btn-mini' %>
+					<%= link_to t('delete'), menu, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-mini btn-danger' %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to t('menus.create_new').capitalize, new_menu_path, class: 'btn btn-primary' %>
+
+<%= render 'shared/admin_sidebar' %>
