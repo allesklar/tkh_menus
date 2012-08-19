@@ -1,0 +1,39 @@
+<% content_for :menu_for_navbar do %>
+	<% if Page.not_for_blog.published.orphans.count >= 1 %>
+		<% Page.not_for_blog.published.orphans.each do |page| %>
+			<% if page.has_children? %>
+				<li class='dropdown'>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= page.nickname.downcase %> <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<%= content_tag :li, link_to(page.nickname.downcase, page) %>
+						<li class="divider"></li>
+						<% page.children.each do |pc| %>
+							<%= content_tag :li, link_to(pc.nickname.downcase, pc) %>
+						<% end %>
+					</ul>
+				</li>
+			<% else %>
+				<%= content_tag :li, link_to(page.nickname.downcase, page) %>
+			<% end -%>
+		<% end %>
+	<% end -%>
+	
+	<% if Menu.orphans.count >= 1 %>
+		<% Menu.orphans.ordered.each do |menu| %>
+			<% if menu.has_children? %>
+				<li class='dropdown'>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">menu.name.downcase <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<%= content_tag :li, link_to(menu.name.downcase, menu.path) %>
+						<li class="divider"></li>
+						<% menu.children.each do |mc| %>
+							<%= content_tag :li, link_to(mc.name.downcase, mc.path) %>
+						<% end %>
+					</ul>
+				</li>
+			<% else %>
+				<%= content_tag :li, link_to(menu.name.downcase, menu.path) %>
+			<% end -%>
+		<% end %>
+	<% end -%>
+<% end %>
