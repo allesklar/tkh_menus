@@ -18,6 +18,10 @@
 		<% end %>
 	<% end -%>
 	
+	<% if Page.for_blog.published.count >= 1 %>
+		<%= content_tag :li, link_to('blog', blog_path) %>
+	<% end -%>
+	
 	<% if Menu.orphans.count >= 1 %>
 		<% Menu.orphans.ordered.each do |menu| %>
 			<% if menu.has_children? %>
