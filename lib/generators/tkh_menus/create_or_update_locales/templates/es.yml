@@ -1,8 +1,5 @@
 es:
 
-  # custom sections
-  language_name: Spanish_es
-
   are_you_sure: 'are you sure?'
   delete: 'delete'
   edit: 'edit'
