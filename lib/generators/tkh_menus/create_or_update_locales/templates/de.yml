@@ -1,26 +1,25 @@
 de:
   
-  are_you_sure: 'are you sure?'
-  delete: 'delete'
-  edit: 'edit'
-  menus: 'menus'
-  
-  
+  are_you_sure: 'Bist Du sicher?'
+  delete: 'löschen'
+  edit: 'bearbeiten'
+  menus: 'Menüs'
+
   activerecord: 
     attributes:
       menus:
-        name: "name"
-        path: 'path'
-        parent: 'parent menu'
-  
+        name: "Name"
+        path: 'Pfad'
+        parent: 'Haupmenü'
+
   menus:
-    create_new: 'create new menu'
-    
+    create_new: 'erstelle neues Menü'
+
     create:
-      notice: 'The menu was successfully created.'
-      warning: 'There was a problem saving the menu'
+      notice: 'Das Menü wurde erfolgreich erstellt.'
+      warning: 'Beim Speichern des Menüs ist ein Fehler aufgetreten'
     update:
-      notice: 'The menu was successfully updated.'
-      warning: 'There was a problem saving the menu'
+      notice: 'Das Menü wurde erfolgreich aktualisiert.'
+      warning: 'Beim Speichern des Menüs ist ein Fehler aufgetreten'
     destroy:
-      notice: 'The menu was deleted'
+      notice: 'Das Menü wurde gelöscht'
