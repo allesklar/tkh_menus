@@ -17,6 +17,7 @@ module TkhMenus
  
       def copy_migrations
         migration_template "create_menus.rb", "db/migrate/create_menus.rb"
+        migration_template "add_menu_position_to_pages.rb", "db/migrate/add_menu_position_to_pages.rb"
       end
  
     end
