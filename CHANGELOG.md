@@ -2,6 +2,11 @@
 
 
 
+## 0.1.1
+
+* Sort navbar menu items by menu_position
+
+
 ## 0.1
 
 * Implemented the reordering of context menus
