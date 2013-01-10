@@ -5,7 +5,7 @@
 			<% if @page.has_children? %>
 				<h2><%= @page.nickname %></h2>
 				<ul>
-			  <% for page in @page.children %>
+			  <% for page in @page.children.by_menu_position %>
 			    <%= content_tag :li, link_to(page.nickname, page) %>
 			  <% end %>
 				</ul>
@@ -14,7 +14,7 @@
 			<% if !@page.orphan? && @page.has_siblings? %>
 				<h2><%= link_to @page.parent.nickname, @page.parent %></h2>
 				<ul>
-			  <% for page in @page.siblings %>
+			  <% for page in @page.siblings.by_menu_position %>
 			    <%= content_tag :li, link_to(page.nickname, page) %>
 			  <% end %>
 				</ul>
