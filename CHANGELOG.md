@@ -2,6 +2,11 @@
 
 
 
+## 0.1.1.1
+
+* Debugged ordering of menu items in context menu for non-administrators
+
+
 ## 0.1.1
 
 * Sort navbar menu items by menu_position
