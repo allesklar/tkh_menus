@@ -2,6 +2,11 @@
 
 
 
+## 0.1.2
+
+* Debugged ordering of sub-menu items in navbar for pages
+
+
 ## 0.1.1.1
 
 * Debugged ordering of menu items in context menu for non-administrators
