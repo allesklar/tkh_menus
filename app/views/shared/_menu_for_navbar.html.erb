@@ -7,7 +7,7 @@
 					<ul class="dropdown-menu">
 						<%= content_tag :li, link_to(page.nickname.downcase, page) %>
 						<li class="divider"></li>
-						<% page.children.each do |pc| %>
+						<% page.children.by_menu_position.each do |pc| %>
 							<%= content_tag :li, link_to(pc.nickname.downcase, pc) %>
 						<% end %>
 					</ul>
