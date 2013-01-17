@@ -2,6 +2,11 @@
 
 
 
+## 0.2.1
+
+* Navbar menu items are not downcased anymore
+
+
 ## 0.2
 
 * Added language switcher partial
