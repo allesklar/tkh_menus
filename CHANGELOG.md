@@ -2,6 +2,12 @@
 
 
 
+## 0.2
+
+* Added language switcher partial
+* Added language switcher for navbar partial
+
+
 ## 0.1.2
 
 * Debugged ordering of sub-menu items in navbar for pages
