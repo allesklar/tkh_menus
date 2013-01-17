@@ -3,17 +3,17 @@
 		<% Page.not_for_blog.orphans.published.by_menu_position.each do |page| %>
 			<% if page.has_children? %>
 				<li class='dropdown'>
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= page.nickname.downcase %> <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= page.nickname %> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<%= content_tag :li, link_to(page.nickname.downcase, page) %>
+						<%= content_tag :li, link_to(page.nickname, page) %>
 						<li class="divider"></li>
 						<% page.children.by_menu_position.each do |pc| %>
-							<%= content_tag :li, link_to(pc.nickname.downcase, pc) %>
+							<%= content_tag :li, link_to(pc.nickname, pc) %>
 						<% end %>
 					</ul>
 				</li>
 			<% else %>
-				<%= content_tag :li, link_to(page.nickname.downcase, page) %>
+				<%= content_tag :li, link_to(page.nickname, page) %>
 			<% end -%>
 		<% end %>
 	<% end -%>
@@ -26,17 +26,17 @@
 		<% Menu.orphans.ordered.each do |menu| %>
 			<% if menu.has_children? %>
 				<li class='dropdown'>
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">menu.name.downcase <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">menu.name <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<%= content_tag :li, link_to(menu.name.downcase, menu.path) %>
+						<%= content_tag :li, link_to(menu.name, menu.path) %>
 						<li class="divider"></li>
 						<% menu.children.each do |mc| %>
-							<%= content_tag :li, link_to(mc.name.downcase, mc.path) %>
+							<%= content_tag :li, link_to(mc.name, mc.path) %>
 						<% end %>
 					</ul>
 				</li>
 			<% else %>
-				<%= content_tag :li, link_to(menu.name.downcase, menu.path) %>
+				<%= content_tag :li, link_to(menu.name, menu.path) %>
 			<% end -%>
 		<% end %>
 	<% end -%>
