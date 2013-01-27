@@ -2,6 +2,11 @@
 
 
 
+## 0.2.2
+
+* Removed automatic blog link from menu navbar partial.
+
+
 ## 0.2.1
 
 * Navbar menu items are not downcased anymore
