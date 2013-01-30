@@ -5,7 +5,7 @@ fr:
   activerecord:
     models:
       menu: 'menu'
-      menus: 'menus'
+      menus: 'les menus'
       
     attributes:
       menu:
