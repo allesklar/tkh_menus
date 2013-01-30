@@ -11,7 +11,7 @@
 								label: t('activerecord.attributes.menu.parent'),
 								:input_html => { 
 																:data => { 	provide: 'typeahead',
-																	 					source: Menu.alphabetical.map(&:name).to_json } 
+																	 					source: Menu.orphans.alphabetical.map(&:name).to_json } 
 																	} %>
 	</div>
 	
