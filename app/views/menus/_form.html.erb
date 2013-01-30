@@ -4,7 +4,15 @@
 	<div class="form-inputs">
 		<%= f.input :name, label: t('activerecord.attributes.menu.name'), hint: t('menus.hint.name') %>
 		<%= f.input :path, label: t('activerecord.attributes.menu.path'), hint: t('menus.hint.path') %>
-		<%= f.input :parent_id, label: t('activerecord.attributes.menu.parent'), hint: t('menus.hint.parent') %>
+		<%# = f.input :parent_id, label: t('activerecord.attributes.menu.parent'), hint: t('menus.hint.parent') %>
+		<%= f.input :parent_menu_name,
+								as: :string,
+								:wrapper_html => { :id => 'parent-menu-name' },
+								label: t('activerecord.attributes.menu.parent'),
+								:input_html => { 
+																:data => { 	provide: 'typeahead',
+																	 					source: Menu.alphabetical.map(&:name).to_json } 
+																	} %>
 	</div>
 	
   <div class="form-actions">
