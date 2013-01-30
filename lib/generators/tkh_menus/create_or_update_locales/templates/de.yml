@@ -4,21 +4,21 @@ de:
 
   activerecord:
     models:
-      menu: 'menu'
+      menu: 'Menü'
       menus: 'Menüs'
-      
+
     attributes:
-      menus:
+      menu:
         name: "Name"
         path: 'Pfad'
         parent: 'Haupmenü'
 
   menus:
-    create_new: 'erstelle neues Menü'
+    create_new: 'Erstelle neues Menü'
     hint:
-      name: 'should be rather short as it will figure in navigation bar and space there is at a premium'
-      path: 'the url the menu is pointing to. Example: /blog ou http://tenthousandhours.eu'
-      parent: 'for second level sub-menu items'
+      name: 'Sollte eher kurz sein, da er in die Navigationsleiste kommt und der Platz dort kostbar ist'
+      path: 'Die Url zu der das Menü hinführt. Beispiel: /blog ouhttp://tenthousandhours.eu'
+      parent: 'Für die zweite Ebene der Untermenüs'
 
     create:
       notice: 'Das Menü wurde erfolgreich erstellt.'
