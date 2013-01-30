@@ -1,11 +1,12 @@
 de:
   
-  are_you_sure: 'Bist Du sicher?'
-  delete: 'löschen'
-  edit: 'bearbeiten'
   menus: 'Menüs'
 
-  activerecord: 
+  activerecord:
+    models:
+      menu: 'menu'
+      menus: 'Menüs'
+      
     attributes:
       menus:
         name: "Name"
@@ -14,6 +15,10 @@ de:
 
   menus:
     create_new: 'erstelle neues Menü'
+    hint:
+      name: 'should be rather short as it will figure in navigation bar and space there is at a premium'
+      path: 'the url the menu is pointing to. Example: /blog ou http://tenthousandhours.eu'
+      parent: 'for second level sub-menu items'
 
     create:
       notice: 'Das Menü wurde erfolgreich erstellt.'

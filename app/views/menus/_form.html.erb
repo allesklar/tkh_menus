@@ -2,9 +2,9 @@
 	<%= f.error_notification %>
 	
 	<div class="form-inputs">
-		<%= f.input :name, hint: 'should be rather short as it will figure in navbar and space there is at a premium' %>
-		<%= f.input :path, hint: 'the url the menu is pointing to' %>
-		<%= f.input :parent_id, hint: 'for nested menu items' %>
+		<%= f.input :name, label: t('activerecord.attributes.menu.name'), hint: t('menus.hint.name') %>
+		<%= f.input :path, label: t('activerecord.attributes.menu.path'), hint: t('menus.hint.path') %>
+		<%= f.input :parent_id, label: t('activerecord.attributes.menu.parent'), hint: t('menus.hint.parent') %>
 	</div>
 	
   <div class="form-actions">

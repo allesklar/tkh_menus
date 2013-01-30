@@ -1,19 +1,24 @@
 fr:
   
-  are_you_sure: 'êtes vous sûr ?'
-  delete: 'supprimer'
-  edit: 'modifier'
   menus: 'menus'
   
-  activerecord: 
+  activerecord:
+    models:
+      menu: 'menu'
+      menus: 'menus'
+      
     attributes:
-      menus:
+      menu:
         name: "nom"
-        path: 'adresse'
-        parent: 'menu parent'
+        path: 'chemin'
+        parent: 'parent du menu'
   
   menus:
     create_new: 'créer un nouveau menu'
+    hint:
+      name: 'doit être assez court pour se placer sur la barre de navigation sans encombre'
+      path: "l'URL de la page web qui correspond a ce menu. Par exemple /blog ou http://tenthousandhours.eu"
+      parent: 'pour les sous-menus de deuxième niveau'
     
     create:
       notice: 'Le menu a été créé.'

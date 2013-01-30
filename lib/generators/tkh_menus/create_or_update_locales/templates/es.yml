@@ -1,12 +1,12 @@
 es:
 
-  are_you_sure: 'are you sure?'
-  delete: 'delete'
-  edit: 'edit'
   menus: 'menus'
 
-
-  activerecord: 
+  activerecord:
+    models:
+      menu: 'menu'
+      menus: 'menus'
+      
     attributes:
       menus:
         name: "name"
@@ -15,6 +15,10 @@ es:
 
   menus:
     create_new: 'create new menu'
+    hint:
+      name: 'should be rather short as it will figure in navigation bar and space there is at a premium'
+      path: 'the url the menu is pointing to. Example: /blog ou http://tenthousandhours.eu'
+      parent: 'for second level sub-menu items'
 
     create:
       notice: 'The menu was successfully created.'

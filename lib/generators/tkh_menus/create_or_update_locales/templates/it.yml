@@ -1,25 +1,25 @@
-en:
-  
-  menus: 'menus' # legacy. needed?
-  
+it:
+
+  menus: 'menus'
+
   activerecord:
     models:
       menu: 'menu'
       menus: 'menus'
-      
+    
     attributes:
       menus:
         name: "name"
         path: 'path'
         parent: 'parent menu'
-  
+
   menus:
     create_new: 'create new menu'
     hint:
-     name: 'should be rather short as it will figure in navigation bar and space there is at a premium'
-     path: 'the url the menu is pointing to. Example: /blog ou http://tenthousandhours.eu'
-     parent: 'for second level sub-menu items'
-    
+      name: 'should be rather short as it will figure in navigation bar and space there is at a premium'
+      path: 'the url the menu is pointing to. Example: /blog ou http://tenthousandhours.eu'
+      parent: 'for second level sub-menu items'
+
     create:
       notice: 'The menu was successfully created.'
       warning: 'There was a problem saving the menu'

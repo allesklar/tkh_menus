@@ -3,10 +3,10 @@
 <table class='table table-striped'>
 	<thead>
   <tr>
-	    <th><%= t( 'activerecord.attributes.menus.name').capitalize %></th>
-			<th><%= t( 'activerecord.attributes.menus.path').capitalize %></th>
-			<th><%= t( 'activerecord.attributes.menus.parent').capitalize %></th>
-	    <th>Actions</th>
+	    <th><%= t('activerecord.attributes.menu.name') %></th>
+			<th><%= t('activerecord.attributes.menu.path') %></th>
+			<th><%= t('activerecord.attributes.menu.parent') %></th>
+	    <th><%= t('actions') %></th>
 	  </tr>
 	</thead>
 	
@@ -23,6 +23,6 @@
 	</tbody>
 </table>
 
-<%= link_to t('menus.create_new').capitalize, new_menu_path, class: 'btn btn-primary' %>
+<%= link_to t('menus.create_new'), new_menu_path, class: 'btn btn-primary' %>
 
 <%= render 'shared/admin_sidebar' %>
