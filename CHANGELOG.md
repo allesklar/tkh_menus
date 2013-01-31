@@ -2,6 +2,11 @@
 
 
 
+## 0.3.1
+
+* Fixed typo bug in 3 locale files
+
+
 ## 0.3
 
 * Added tab admin menu navigation.
