@@ -8,7 +8,7 @@ de:
       menus: 'Menüs'
 
     attributes:
-      menus:
+      menu:
         name: "Name"
         path: 'Pfad'
         parent: 'Haupmenü'

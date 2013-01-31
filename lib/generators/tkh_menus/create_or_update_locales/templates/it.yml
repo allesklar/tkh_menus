@@ -8,7 +8,7 @@ it:
       menus: 'menus'
     
     attributes:
-      menus:
+      menu:
         name: "name"
         path: 'path'
         parent: 'parent menu'
