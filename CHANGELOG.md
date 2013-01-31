@@ -2,6 +2,14 @@
 
 
 
+## 0.3
+
+* Added tab admin menu navigation.
+* Set up many translations
+* Autocomplete of the parent menu in form
+* Added Italian to the full name hash
+
+
 ## 0.2.2
 
 * Removed automatic blog link from menu navbar partial.
