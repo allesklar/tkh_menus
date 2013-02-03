@@ -1,9 +1,7 @@
 <% if I18n.available_locales.size > 1 %>
 
 	<div class="btn-group">
-	  <a class="btn btn-medium btn-primary btn-success dropdown-toggle" data-toggle="dropdown" href="#">
-		  <%= t('full_name') %>
-	  <span class="caret"></span>
+	  <a class="btn btn-medium btn-primary btn-success dropdown-toggle" data-toggle="dropdown" href="#"><%= t('full_name') %>&nbsp;<span class="caret"></span>
 	  </a>
 	  <ul class="dropdown-menu">
 	  	<% for loc in I18n.available_locales %>
