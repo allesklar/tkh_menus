@@ -1,21 +1,10 @@
 <% if I18n.available_locales.size > 1 %>
 
-	<% def full_language_name( lang = :en) %>  
-		<% list = { :en => 'English', 
-								:fr => 'Français', 
-								:es => 'Español',
-								:de => 'Deutsch',
-								:it => 'Italiano'
-							}
-		%>
-	  <% list[lang] %>
-	<% end %>
-
 	<li class="dropdown active">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= full_language_name(I18n.locale) %><span class="caret"></span></a>
+	  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= t('full_name') %><span class="caret"></span></a>
 	  <ul class="dropdown-menu">
 	  	<% for loc in I18n.available_locales %>
-	    	<%= content_tag( :li, link_to( full_language_name(loc), :locale => loc ))  unless loc.to_s == I18n.locale.to_s %>
+	    	<%= content_tag( :li, link_to(t('full_name', locale: loc), :locale => loc))  unless loc.to_s == I18n.locale.to_s %>
 	  	<% end %>
 	  </ul>
   </li>
