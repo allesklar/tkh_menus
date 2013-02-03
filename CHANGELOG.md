@@ -2,6 +2,11 @@
 
 
 
+## 0.3.2
+
+* Refactored the language switchers
+
+
 ## 0.3.1
 
 * Fixed typo bug in 3 locale files
