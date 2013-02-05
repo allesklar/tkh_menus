@@ -10,6 +10,7 @@
 								:wrapper_html => { :id => 'parent-menu-name' },
 								label: t('activerecord.attributes.menu.parent'),
 								:input_html => { 
+																:autocomplete => 'off',
 																:data => { 	provide: 'typeahead',
 																	 					source: Menu.orphans.alphabetical.map(&:name).to_json } 
 																	} %>
