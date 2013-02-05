@@ -1,0 +1,21 @@
+<% unless administrator? # basic functionality for all users %>
+
+	<h2>Levels</h2>
+	<ul>
+	  <% for level in Level.by_position %>
+	    <%= content_tag :li, link_to(level.nickname, level) %>
+	  <% end %>
+	</ul>
+	
+<% else # administrators can reorder menu levels %>
+
+	<h2>Levels</h2>
+	<ul class="draggable" data-update-url="<%= sort_levels_path %>">
+	  <% for level in Level.by_position %>
+			<%= content_tag :li, level, class: 'level', id: "level_#{level.id}" do %>
+				<%= image_tag 'drag-handle.gif', :class => 'handle silhouette' %> <%= link_to level.nickname, level -%>
+			<% end -%>
+	  <% end %>
+	</ul>
+	
+<% end -%>
