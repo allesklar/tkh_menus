@@ -1,0 +1,21 @@
+<% unless administrator? # basic functionality for all users %>
+
+	<h2>Styles</h2>
+	<ul>
+	  <% for style in Style.all.by_position %>
+	    <%= content_tag :li, link_to(style.nickname, style) %>
+	  <% end %>
+	</ul>
+	
+<% else # administrators can reorder menu styles %>
+
+	<h2>Styles</h2>
+	<ul class="draggable" data-update-url="<%= sort_styles_path %>">
+	  <% for style in Style.all.by_position %>
+			<%= content_tag :li, style, class: 'style', id: "style_#{style.id}" do %>
+				<%= image_tag 'drag-handle.gif', :class => 'handle silhouette' %> <%= link_to style.nickname, style -%>
+			<% end -%>
+	  <% end %>
+	</ul>
+	
+<% end -%>
