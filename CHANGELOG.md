@@ -2,6 +2,14 @@
 
 
 
+## 0.3.3
+
+* Turned off browser autocomplete from menu form, parent menu field
+* Changed neutral edit link in tab admin menu
+* Added a context menu for styles
+* Added a context menu for levels
+
+
 ## 0.3.2
 
 * Refactored the language switchers
