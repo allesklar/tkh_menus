@@ -1,6 +1,6 @@
 # TKH Menus
 
-This Rails engine dynamically generates menus. 
+This Rails engine dynamically generates menus.
 
 Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful. It's meant primarily to be used with other tkh gems and the TKH CMS eco-system but overtime we want it to be used individually as well. The latter implementation will be accelerated if some issues and pull requests come in, denoting some interest out there.
 
@@ -11,14 +11,18 @@ It's still embryonic but many improvements to come.
 
 The following things are needed:
 
-* Ruby 1.9.2 or later
+* Ruby 2.0 or later
 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+For Rails 4.0.0 and above add this line to your application's Gemfile:
 
-    gem 'tkh_menus', '~> 0.0'
+    gem 'tkh_menus', '~> 0.9'
+
+For prior versions of Rails, use this:
+
+    gem 'tkh_menus', '< 0.9'
 
 Then execute:
 
@@ -31,7 +35,7 @@ Import migrations and needed files
 Run the migrations
 
 		$ rake db:migrate
-		
+
 And then of course restart your server!
 
 		$ rails s
@@ -46,7 +50,7 @@ Update the gem:
 Update files, migrations, etc. This is only needed with a new minor version number ( second level from left )
 
 		$ rake tkh_menus:update
-		
+
 Run migrations if there are new ones
 
 		$ rake db:migrate
