@@ -4,47 +4,47 @@ Globalize::ActiveRecord::Translation.class_eval do
 end
 
 class Menu < ActiveRecord::Base
-  
+
   attr_accessible :name, :path, :position, :parent_id, :parent_menu_name
-  
+
   validates_presence_of :name, :path
-  
+
   translates :name, :path
-    
+
   def to_param
     name ? "#{id}-#{name.to_url}" : id
   end
-  
-  scope :alphabetical, order('name')
-  scope :ordered, order('position, id')
+
+  scope :alphabetical, -> { order('name') }
+  scope :ordered, -> { order('position, id') }
   # tree scopes
-  scope :orphans, where('parent_id IS ?', nil)
-  scope :with_parent_id, lambda { |id| where('parent_id = ?', id) }
-  
+  scope :orphans,  -> { where('parent_id IS ?', nil) }
+  scope :with_parent_id, -> { |id| where('parent_id = ?', id) }
+
   def orphan?
     parent_id == nil
   end
-  
+
   def has_children?
     Menu.with_parent_id(id).count >= 1
   end
-  
+
   def children
     Menu.with_parent_id(id)
   end
-  
+
   def parent
     Menu.find(parent_id)
   end
-  
+
   def has_siblings?
     Menu.with_parent_id(parent_id).count >= 1
   end
-  
+
   def siblings
     Menu.with_parent_id(parent_id)
   end
-  
+
   ### autocomplete related instance methods
   def parent_menu_name
       parent.try(:name) unless self.orphan?
@@ -57,5 +57,5 @@ class Menu < ActiveRecord::Base
       self.parent_id = nil
     end
   end
-  
+
 end
