@@ -19,7 +19,7 @@ class Menu < ActiveRecord::Base
   scope :ordered, -> { order('position, id') }
   # tree scopes
   scope :orphans,  -> { where('parent_id IS ?', nil) }
-  scope :with_parent_id, -> { |id| where('parent_id = ?', id) }
+  scope :with_parent_id, lambda { |id| where('parent_id = ?', id) }
 
   def orphan?
     parent_id == nil
