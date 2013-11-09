@@ -1,11 +1,11 @@
 # this is needed for now to make mass assignment security compatible with the translation of globalize3
-Globalize::ActiveRecord::Translation.class_eval do
-  attr_accessible :locale
-end
+# Globalize::ActiveRecord::Translation.class_eval do
+#   attr_accessible :locale
+# end
 
 class Menu < ActiveRecord::Base
 
-  attr_accessible :name, :path, :position, :parent_id, :parent_menu_name
+  # attr_accessible :name, :path, :position, :parent_id, :parent_menu_name
 
   validates_presence_of :name, :path
 
