@@ -1,8 +1,8 @@
 class MenusController < ApplicationController
-  
+
   before_filter :authenticate
   before_filter :authenticate_with_admin
-  
+
   def index
     @menus = Menu.ordered
     switch_to_admin_layout
@@ -19,7 +19,7 @@ class MenusController < ApplicationController
   end
 
   def create
-    @menu = Menu.new(params[:menu])
+    @menu = Menu.new(menu_params)
     if @menu.save
       redirect_to menus_path, notice: t('menus.create.notice')
     else
@@ -28,7 +28,7 @@ class MenusController < ApplicationController
   end
 
   def update
-    @menu = Menu.find(params[:id])
+    @menu = Menu.find(menu_params)
     if @menu.update_attributes(params[:menu])
       redirect_to menus_path, notice: t('menus.update.notice')
     else
@@ -40,5 +40,12 @@ class MenusController < ApplicationController
     @menu = Menu.find(params[:id])
     @menu.destroy
     redirect_to menus_url, notice: t('menus.destroy.notice')
+  end
+
+  private
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def menu_params
+    params.require(:menu).permit(:name, :path, :parent_id, :parent_menu_name)
   end
 end
