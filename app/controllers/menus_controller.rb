@@ -28,8 +28,8 @@ class MenusController < ApplicationController
   end
 
   def update
-    @menu = Menu.find(menu_params)
-    if @menu.update_attributes(params[:menu])
+    @menu = Menu.find(params[:id])
+    if @menu.update(menu_params)
       redirect_to menus_path, notice: t('menus.update.notice')
     else
       render action: "edit", warning: t('menus.update.warning'), layout: 'admin'
