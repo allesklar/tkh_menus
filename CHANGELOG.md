@@ -3,7 +3,7 @@
 
 
 
-## 0.9
+## 0.9.1
 
 * Upgraded to Rails 4
 * Upgraded all dependencies
