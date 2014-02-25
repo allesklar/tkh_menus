@@ -2,6 +2,13 @@
 
 
 
+
+## 0.9
+
+* Upgraded to Rails 4
+* Upgraded all dependencies
+
+
 ## 0.3.3
 
 * Turned off browser autocomplete from menu form, parent menu field
