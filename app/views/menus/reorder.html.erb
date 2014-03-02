@@ -1,0 +1,13 @@
+<%= render 'tab_admin_menu' %>
+
+<p>Please use this page to reorder menu items within one level and one section. For reorganizing the menu hierarchy you should edit the individual menu entry's 'parent id' field.</p>
+
+<p>To change the position of menu items in this list use the little handle to drag entries up or down.</p>
+
+<ul class="draggable" data-update-url="<%= sort_menus_path %>">
+  <% for menu in @menus %>
+    <%= content_tag_for :li, menu, class: 'handle' do %>
+      <%= image_tag 'admin/drag-handle.gif', :class => 'handle' %> <%= menu.id.to_s + ".  " + menu.name.to_s -%>
+    <% end %>
+  <% end %>
+</ul>

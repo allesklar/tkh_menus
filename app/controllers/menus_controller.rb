@@ -42,6 +42,19 @@ class MenusController < ApplicationController
     redirect_to menus_url, notice: t('menus.destroy.notice')
   end
 
+  def reorder
+    menu = Menu.find(params[:id])
+    @menus = menu.self_and_siblings.ordered
+    switch_to_admin_layout
+  end
+
+  def sort
+    params[:menu].each_with_index do |id, index|
+      Menu.update(id, position: index+1)
+    end
+    render nothing: true
+  end
+
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.

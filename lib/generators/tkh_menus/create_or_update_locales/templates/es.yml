@@ -6,7 +6,7 @@ es:
     models:
       menu: 'menu'
       menus: 'menus'
-      
+
     attributes:
       menu:
         name: "name"
@@ -28,3 +28,6 @@ es:
       warning: 'There was a problem saving the menu'
     destroy:
       notice: 'The menu was deleted'
+
+
+    reorder: 'reorder'

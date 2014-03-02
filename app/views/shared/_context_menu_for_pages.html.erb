@@ -18,7 +18,7 @@
 			</ul>
 		<% end %>
 	<% end -%>
-	
+
 <% else # administrators can reorder menu pages %>
 
   <% if @page %>
@@ -27,7 +27,7 @@
 			<ul class="draggable" data-update-url="<%= sort_pages_path %>">
 			  <% for page in @page.children.by_menu_position %>
 					<%= content_tag :li, page, class: 'page', id: "page_#{page.id}" do %>
-						<%= image_tag 'drag-handle.gif', :class => 'handle silhouette' %> <%= link_to page.nickname, page -%>
+						<%= image_tag 'admin/drag-handle.gif', :class => 'handle silhouette' %> <%= link_to page.nickname, page -%>
 					<% end -%>
 			  <% end %>
 			</ul>
@@ -38,11 +38,11 @@
 			<ul class="draggable" data-update-url="<%= sort_pages_path %>">
 			  <% for page in @page.siblings.by_menu_position %>
 					<%= content_tag :li, page, class: 'page', id: "page_#{page.id}" do %>
-						<%= image_tag 'drag-handle.gif', :class => 'handle silhouette' %> <%= link_to page.nickname, page -%>
+						<%= image_tag 'admin/drag-handle.gif', :class => 'handle silhouette' %> <%= link_to page.nickname, page -%>
 					<% end -%>
 			  <% end %>
 			</ul>
 		<% end %>
 	<% end -%>
-	
+
 <% end -%>

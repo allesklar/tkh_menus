@@ -1,5 +1,5 @@
 de:
-  
+
   menus: 'Menüs'
 
   activerecord:
@@ -28,3 +28,5 @@ de:
       warning: 'Beim Speichern des Menüs ist ein Fehler aufgetreten'
     destroy:
       notice: 'Das Menü wurde gelöscht'
+
+    reorder: 'reorder'

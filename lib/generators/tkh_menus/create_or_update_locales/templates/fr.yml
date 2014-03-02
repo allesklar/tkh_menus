@@ -1,25 +1,25 @@
 fr:
-  
+
   menus: 'menus'
-  
+
   activerecord:
     models:
       menu: 'menu'
       menus: 'les menus'
-      
+
     attributes:
       menu:
         name: "nom"
         path: 'chemin'
         parent: 'parent du menu'
-  
+
   menus:
     create_new: 'créer un nouveau menu'
     hint:
       name: 'doit être assez court pour se placer sur la barre de navigation sans encombre'
       path: "l'URL de la page web qui correspond a ce menu. Par exemple /blog ou http://tenthousandhours.eu"
       parent: 'pour les sous-menus de deuxième niveau'
-    
+
     create:
       notice: 'Le menu a été créé.'
       warning: "Il y'a eu un probleme et le menu n'a pas été sauvegardé"
@@ -28,3 +28,5 @@ fr:
       warning: "Il y'a eu un probleme et les changements de ce menu n'ont pas été sauvegardés"
     destroy:
       notice: 'Le menu a été supprimé'
+
+    reorder: 'organiser'

@@ -1,5 +1,6 @@
-<ul class="nav nav-tabs" id="admin-menu-tab">	
+<ul class="nav nav-tabs" id="admin-menu-tab">
 	<%= content_tag :li, link_to(t('new'), new_menu_path), ({ class: 'active' } if controller.action_name.to_s == 'new' ) %>
 	<%= content_tag :li, link_to(t('list'), menus_path), ({ class: 'active' } if controller.action_name.to_s == 'index' ) %>
-	<%= content_tag :li, link_to(t('edit'), '#'), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>	
+	<%= content_tag :li, link_to(t('edit'), '#'), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>
+  <%= content_tag :li, link_to(t('menus.reorder'), reorder_menu_path(Menu.orphans.first.id)), ({ class: 'active' } if controller.action_name.to_s == 'reorder' ) %>
 </ul>

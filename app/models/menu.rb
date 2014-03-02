@@ -33,6 +33,10 @@ class Menu < ActiveRecord::Base
     Menu.with_parent_id(id)
   end
 
+  def has_parent?
+    !parent_id.nil?
+  end
+
   def parent
     Menu.find(parent_id)
   end
@@ -42,7 +46,15 @@ class Menu < ActiveRecord::Base
   end
 
   def siblings
-    Menu.with_parent_id(parent_id)
+    self_and_siblings - [self]
+  end
+
+  def self_and_siblings
+    if has_parent?
+      parent.children
+    else
+      Menu.orphans
+    end
   end
 
   ### autocomplete related instance methods
