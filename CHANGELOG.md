@@ -2,6 +2,11 @@
 
 
 
+## 0.9.2
+
+* Fixed up buttons in menus index view
+* Added drag and drop reorder tab in menu section
+
 
 ## 0.9.1
 
