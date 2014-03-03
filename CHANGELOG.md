@@ -2,6 +2,11 @@
 
 
 
+## 0.9.3
+
+* Added the admin sidebar to the menu reorder view.
+
+
 ## 0.9.2
 
 * Fixed up buttons in menus index view
