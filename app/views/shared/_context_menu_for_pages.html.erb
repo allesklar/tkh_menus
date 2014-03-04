@@ -2,18 +2,18 @@
 	<% if @page %>
 		<% if @page.has_children? %>
 			<h2><%= @page.nickname %></h2>
-			<ul>
+			<ul class="list-group">
 		  <% for page in @page.children.by_menu_position %>
-		    <%= content_tag :li, link_to(page.nickname, page) %>
+		    <%= content_tag :li, link_to(page.nickname, page), class: 'list-group-item' %>
 		  <% end %>
 			</ul>
 		<% end %>
 
 		<% if !@page.orphan? && @page.has_siblings? %>
 			<h2><%= link_to @page.parent.nickname, @page.parent %></h2>
-			<ul>
+			<ul class='list-group'>
 		  <% for page in @page.siblings.by_menu_position %>
-		    <%= content_tag :li, link_to(page.nickname, page) %>
+		    <%= content_tag :li, link_to(page.nickname, page), class: 'list-group-item' %>
 		  <% end %>
 			</ul>
 		<% end %>
@@ -24,9 +24,9 @@
   <% if @page %>
 		<% if @page.has_children? %>
 			<h2><%= @page.nickname %></h2>
-			<ul class="draggable" data-update-url="<%= sort_pages_path %>">
+			<ul class="draggable list-group" data-update-url="<%= sort_pages_path %>">
 			  <% for page in @page.children.by_menu_position %>
-					<%= content_tag :li, page, class: 'page', id: "page_#{page.id}" do %>
+					<%= content_tag :li, page, class: 'page list-group-item', id: "page_#{page.id}" do %>
 						<%= image_tag 'admin/drag-handle.gif', :class => 'handle silhouette' %> <%= link_to page.nickname, page -%>
 					<% end -%>
 			  <% end %>
@@ -35,9 +35,9 @@
 
 		<% if !@page.orphan? && @page.has_siblings? %>
 			<h2><%= link_to @page.parent.nickname, @page.parent %></h2>
-			<ul class="draggable" data-update-url="<%= sort_pages_path %>">
+			<ul class="draggable list-group" data-update-url="<%= sort_pages_path %>">
 			  <% for page in @page.siblings.by_menu_position %>
-					<%= content_tag :li, page, class: 'page', id: "page_#{page.id}" do %>
+					<%= content_tag :li, page, class: 'page list-group-item', id: "page_#{page.id}" do %>
 						<%= image_tag 'admin/drag-handle.gif', :class => 'handle silhouette' %> <%= link_to page.nickname, page -%>
 					<% end -%>
 			  <% end %>
