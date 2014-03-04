@@ -2,6 +2,11 @@
 
 
 
+## 0.9.4
+
+* Changed markup in context menu page to match bootstrap 3 lists.
+
+
 ## 0.9.3
 
 * Added the admin sidebar to the menu reorder view.
