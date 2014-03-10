@@ -2,6 +2,12 @@
 
 
 
+## 0.9.5
+
+* Cleaned up menus form
+* Debugged tab admin menu for when menu table is empty
+
+
 ## 0.9.4
 
 * Changed markup in context menu page to match bootstrap 3 lists.
