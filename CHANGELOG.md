@@ -2,6 +2,11 @@
 
 
 
+## 0.9.7
+
+* Fixed up markup for menu form
+
+
 ## 0.9.6
 
 * Upgraded rails and simple_form dependencies.
