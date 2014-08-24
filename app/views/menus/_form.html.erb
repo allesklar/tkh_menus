@@ -1,9 +1,8 @@
-<%= simple_form_for @menu, :html => { class: 'form-horizontal' } do |f| %>
+<%= simple_form_for @menu do |f| %>
 	<%= f.error_notification %>
 
 		<%= f.input :name, label: t('activerecord.attributes.menu.name'), hint: t('menus.hint.name') %>
 		<%= f.input :path, label: t('activerecord.attributes.menu.path'), hint: t('menus.hint.path') %>
-		<%# = f.input :parent_id, label: t('activerecord.attributes.menu.parent'), hint: t('menus.hint.parent') %>
 		<%= f.input :parent_menu_name,
 								as: :string,
 								:wrapper_html => { :id => 'parent-menu-name' },
@@ -13,6 +12,6 @@
 																:data => { 	provide: 'typeahead',
 																	 					source: Menu.orphans.alphabetical.map(&:name).to_json }
 																	} %>
-		<br />
+
     <%= f.button :submit, :class => 'btn btn-primary' %>
 <% end %>
