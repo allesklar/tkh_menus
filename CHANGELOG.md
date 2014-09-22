@@ -2,6 +2,11 @@
 
 
 
+## 0.9.8
+
+* Loosened up dependency versioning.
+
+
 ## 0.9.7
 
 * Fixed up markup for menu form
