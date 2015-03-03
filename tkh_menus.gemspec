@@ -16,10 +16,10 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md", "CHANGELOG.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "> 4.0.0"
-  s.add_dependency 'stringex', '2.2.0'
-  s.add_dependency "simple_form", '~> 3.1.0.rc1'
-  s.add_dependency 'globalize', '~> 4.0.0'
+  s.add_dependency "rails"
+  s.add_dependency 'stringex'
+  s.add_dependency "simple_form"
+  s.add_dependency 'globalize'
 
   s.add_development_dependency "sqlite3"
 end
