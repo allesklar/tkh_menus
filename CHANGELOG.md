@@ -2,6 +2,11 @@
 
 
 
+## 0.9.9
+
+* Removed gem dependency versions
+
+
 ## 0.9.8
 
 * Loosened up dependency versioning.
