@@ -1,3 +1,3 @@
 module TkhMenus
-  VERSION = "0.9.9"
+  VERSION = "0.13"
 end
