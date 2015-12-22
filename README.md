@@ -18,7 +18,7 @@ The following things are needed:
 
 For Rails 4.0.0 and above add this line to your application's Gemfile:
 
-    gem 'tkh_menus', '~> 0.9'
+    gem 'tkh_menus', '> 0.9'
 
 For prior versions of Rails, use this:
 
