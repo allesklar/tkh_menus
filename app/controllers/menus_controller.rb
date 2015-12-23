@@ -1,7 +1,7 @@
 class MenusController < ApplicationController
 
   before_filter :authenticate
-  before_action -> { require_permission 'write_menus' }
+  before_action -> { require_permission_to 'write_menus' }
 
   def index
     @menus = Menu.ordered
