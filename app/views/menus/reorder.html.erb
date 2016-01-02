@@ -7,7 +7,7 @@
 <ul class="draggable" data-update-url="<%= sort_menus_path %>">
   <% for menu in @menus %>
     <%= content_tag_for :li, menu, class: 'handle' do %>
-      <%= image_tag 'admin/drag-handle.gif', :class => 'handle' %> <%= menu.id.to_s + ".  " + menu.name.to_s -%>
+      <%= image_tag 'admin/drag-handle.gif', :class => 'handle' %> <%= menu.id.to_s + ".  " + menu.name.to_s %>
     <% end %>
   <% end %>
 </ul>
